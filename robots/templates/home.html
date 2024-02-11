@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+    <title>Robot Information Form</title>
+  </head>
+
+  <!-- This template loads the "head.html" template tag library. -->
+<body>
+
+<div class="container mt-5">
+  <h2>Robot Information Form</h2>
+  <form>
+    <div class="mb-3">
+      <label for="robot-category" class="form-label">Robot Category</label>
+      <select class="form-select" id="robot-category">
+        <option selected>Choose...</option>
+        <option value="1">Industrial</option>
+        <option value="2">Service</option>
+        <option value="3">Medical</option>
+        <option value="4">Entertainment</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="manufacturer" class="form-label">Manufacturer</label>
+      <select class="form-select" id="manufacturer">
+        <option selected>Choose...</option>
+        <option value="1">Manufacturer A</option>
+        <option value="2">Manufacturer B</option>
+        <option value="3">Manufacturer C</option>
+        <option value="4">Manufacturer D</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="currency" class="form-label">Currency</label>
+      <select class="form-select" id="currency">
+        <option selected>Choose...</option>
+        <option value="1">USD</option>
+        <option value="2">EUR</option>
+        <option value="3">JPY</option>
+        <option value="4">GBP</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="text" class="form-control" id="price">
+    </div>
+    <div class="mb-3">
+      <label for="manufacturing-date" class="form-label">Manufacturing Date</label>
+      <input type="datetime-local" class="form-control" id="manufacturing-date">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+ </div>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

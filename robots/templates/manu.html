@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
+    <title>Robot Information Form</title>
+  </head>
+<body>
+
+
+<div class="container mt-5">
+  <h2>Manufacturer</h2>
+  <form id="manufacturerForm">
+    <input type="hidden" id="manufacturerId" value="<id>"> <!-- Example ID; replace with dynamic value as needed -->
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary" id="updateBtn">Update</button>
+    <button type="button" class="btn btn-danger" id="deleteBtn">Delete</button>
+  </form>
+</div>
+
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'main.js' %}"></script>
+</body>
+</html>

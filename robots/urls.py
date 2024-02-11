@@ -2,6 +2,17 @@ from django.urls import path
 from robots import views
 
 urlpatterns = [
+    path('home/', views.home, name='home'),
+    path('manu/', views.manu, name='manu'),
+
+    path('manu/<int:pk>/',
+         views.ManufacturerDetail.as_view(),
+         name='manufacturer-detail'),
+
+    path('robocat/', views.robocat, name='robocat'),
+
+    path('thanks/', views.thanks, name='thanks'),
+
     path('robocategory/',
          views.RobotCategoryList.as_view(),
          name='robotcategory-list'),

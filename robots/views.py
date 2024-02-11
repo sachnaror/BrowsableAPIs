@@ -1,10 +1,35 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from robots.models import Manufacturer, Robot, RobotCategory
 from robots.serializers import (ManufacturerSerializer,
                                 RobotCategorySerializer, RobotSerializer)
+
+
+def home(request):
+    return render(request, 'home.html')
+
+
+def manu(request):
+    if request.method == 'POST':
+        # Perform successful submit/post logic here
+        return redirect('thanks')
+    else:
+        return render(request, 'manu.html')
+
+
+def manudetail(request):
+    return render(request, 'manudetail.html')
+
+
+def robocat(request):
+    return render(request, 'robocat.html')
+
+
+def thanks(request):
+    # print("inside thanks function")
+    return render(request, 'thanks.html')
 
 
 class ApiRoot(generics.GenericAPIView):
